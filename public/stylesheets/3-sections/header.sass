@@ -1,0 +1,94 @@
+header
+  width: 320px
+  background-color: white
+  position: relative
+  z-index: 2
+  @media screen and (max-width: 770px)
+    width: 0
+
+  .header-position
+    height: 100vh
+    width: 320px
+    position: fixed
+    display: flex
+    align-items: center
+    border-right: 1px dotted grey
+    overflow: hidden
+    @media screen and (max-width: 770px)
+      width: 40px
+      border-right: 0
+
+    h3.info
+      margin: 0 0 0 35px
+      font-size: 18px
+      color: black
+      font-weight: bold
+      cursor: crosshair
+      letter-spacing: 0.17em
+      @media screen and (max-width: 770px)
+        display: none
+
+    .links
+      position: absolute
+      bottom: 20px
+      left: 35px
+      @media screen and (max-width: 770px)
+        display: none
+
+  .menu
+    position: absolute
+    left: 320px
+    width: 80px
+    height: 100vh
+    border-left: 1px dotted grey
+    display: flex
+    justify-content: center
+    align-items: center
+    @media screen and (max-width: 770px)
+      left: -60px
+      width: 40px
+      border-left: 0
+      border-right: 1px dotted grey
+      background-color: white
+
+
+    .burger
+      height: 30px
+      width: 35px
+      // background-color: pink
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: crosshair
+
+    span,
+    span:after,
+    span:before
+      content: ""
+      display: block
+      position: relative
+      height: 2px
+      width: 20px
+      background-color: grey
+      transform-origin: center
+    span:before
+      transform: translateY(-7px)
+
+    span:after
+      transform: translateY(5px)
+
+
+  .is-visible
+    transition: all 400ms ease-in-out
+    transform: translate(-80px)
+    @media screen and (max-width: 770px)
+      transition: all 400ms ease-in-out
+      transform: translate(60px)
+
+  .is-hidden
+    transition: all 400ms ease-out
+    transform: translate(80px)
+    @media screen and (max-width: 770px)
+      transition: all 400ms ease-in-out
+      transform: translate(-60px)

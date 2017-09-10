@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .editor
+    form(action="/backend/updatearticle/"+ article_list.id method="post")
+      input(type="text" name="date" value=`${article_list.date}`).date
+      input(type="text" name="dateexact" value=`${article_list.dateexact}`).dateexact
+      input(type="text" name="title" value=`${article_list.title}`).title
+      textarea(type="text" name="article") #{article_list.article}   
+      button.btn.btn-primary(type="submit") UPLOAD ARTICLE  
+  
+   

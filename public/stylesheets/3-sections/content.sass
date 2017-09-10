@@ -1,0 +1,134 @@
+img
+  height: auto
+  max-width: 100%
+
+.home-section
+  z-index: 1
+
+  .content
+    height: 100%
+
+    .min-header
+      position: fixed
+      width: 100%
+      border-bottom: 1px dotted grey
+
+      background-color: white
+      z-index: 999
+      cursor: crosshair
+      display: flex
+      align-items: center
+      justify-content: space-between
+      @media screen and (min-width: 770px)
+        display: none
+
+      h3.info
+        text-align: left
+        font-size: 18px
+        font-weight: bold
+        letter-spacing: 0.17em
+        margin-left: 50px
+        margin-bottom: 20px
+
+      .links
+        text-align: right
+        margin-right: 7%
+
+    ul
+      list-style: none
+      padding: 0
+      cursor: crosshair
+      @media screen and (max-width: 770px)
+        padding-top: 65px
+
+      li
+        width: 100%
+        display: flex
+        align-items: center
+        padding: 20px 20px 20px 50px
+        border-top: 1px dotted white
+        border-bottom: 1px dotted white
+        transition: all 500ms ease-in-out
+
+        &:hover
+          transition: all 500ms ease-in-out
+          border-top: 1px dotted grey
+          border-bottom: 1px dotted grey
+
+        p
+          margin: 0
+
+        .date
+          color: grey
+          font-weight: 400
+
+        .headline
+          font-weight: bold
+          margin-left: 50px
+
+    .list-fadeout
+      transition: all 300ms ease-out
+      transform: translate(-400px)
+      opacity: 0
+
+    .list-fadein
+      transition: all 600ms ease-out
+      opacity: 1
+
+    .article
+      position: absolute
+      top: 0
+      padding-left: 270px
+      opacity: 0
+      height: auto
+      width: calc(100% - 170px)
+      margin-bottom: 40px
+      @media screen and (max-width: 770px)
+        padding-top: 65px
+        width: calc(100% + 170px)
+
+      .date
+        margin-top: 40px
+        margin-bottom: 100px
+
+      .headline
+        position: relative
+        text-align: left
+        max-width: 550px
+        margin-bottom: 100px
+        font-size: 3rem
+
+      .article-content
+        max-width: 650px
+        // @media screen and (max-width: 770px)
+        //   width: calc(100% - 50px)
+
+    .about
+      position: absolute
+      top: 0
+      padding-left: 270px
+      height: auto
+      width: calc(100% - 170px)
+      margin-bottom: 40px
+      opacity: 0
+      @media screen and (max-width: 770px)
+        padding-top: 65px
+        width: calc(100% + 170px)
+
+      h1
+        text-align: left
+        margin: 40px 0
+
+      p
+        max-width: 500px
+        margin-top: 60px
+
+    .article-fadein
+      transition: all 200ms ease-in
+      transform: translate(-200px)
+      opacity: 1
+
+    .article-fadeout
+      transition: all 300ms ease-out
+      transform: translate(300px)
+      opacity: 0

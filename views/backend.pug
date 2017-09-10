@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .admin
+    .postarticle 
+      h3 POST NEW ARTICLE
+    
+    ul
+      each article in article_list
+        li 
+          .buttons
+            a.delete(data-id=`${article.id}`)
+              button.btn.btn-danger DELETE
+            a(href="/backend/updatearticle/"+ article.id)
+              button.btn.btn-primary EDIT
+          .date
+            p #{article.date}
+          .title
+            p #{article.title}
+          
+      
+      else
+        li There are no articles.
+    

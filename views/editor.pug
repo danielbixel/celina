@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .editor
+    form(action="newarticle" method="post")
+      input(type="text" name="date" placeholder="year").date
+      input(type="text" name="dateexact" placeholder="date").dateexact
+      
+      input(type="text" name="title" placeholder="title").title
+      textarea(type="text" name="article")
+      button.btn.btn-primary(type="submit") UPLOAD ARTICLE    
