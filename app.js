@@ -50,7 +50,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ limit: '50mb',extended: true }));
@@ -75,7 +75,7 @@ app.use('/backend', backend);
 
 // Will handle POST requests to /upload
 app.post('/backend/upload', upload.single('file'), function(req, res) {
-    var imageLink = '/images/' + req.file.filename;
+    var imageLink = 'images/' + req.file.filename;
     // console.log(imageLink);
     res.json({location: imageLink}).end();
 
